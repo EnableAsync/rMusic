@@ -1,36 +1,38 @@
 <script setup>
 import { ref } from "vue";
+import { ElCard, ElRow, ElCol, ElAvatar, ElButton } from "element-plus";
+
 const username = ref("EnableAsyncc");
 const level = ref("Lv9");
 const checked = ref(false);
 </script>
 
 <template>
-  <el-card style="width: 350px">
-    <el-row :gutter="20" justify="center" align="middle">
-      <el-col :span="8" style="text-align: center">
-        <el-avatar
+  <ElCard style="width: 350px">
+    <ElRow :gutter="20" justify="center" align="middle">
+      <ElCol :span="8" style="text-align: center">
+        <ElAvatar
           :size="60"
           src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"
         />
-      </el-col>
-      <el-col :span="8" style="text-align: center; width: 100%">
-        <el-row>
+      </ElCol>
+      <ElCol :span="8" style="text-align: center; width: 100%">
+        <ElRow>
           <div style="margin: auto">
             {{ username }}
           </div>
-        </el-row>
-        <el-row>
+        </ElRow>
+        <ElRow>
           <div style="margin: auto">
             {{ level }}
           </div>
-        </el-row>
-      </el-col>
-      <el-col :span="8" style="text-align: center">
-        <el-button :disabled="checked" @click="checked = !checked">
+        </ElRow>
+      </ElCol>
+      <ElCol :span="8" style="text-align: center">
+        <ElButton :disabled="checked" @click="checked = !checked">
           {{ checked ? "已签到" : "签到" }}
-        </el-button>
-      </el-col>
-    </el-row>
-  </el-card>
+        </ElButton>
+      </ElCol>
+    </ElRow>
+  </ElCard>
 </template>
