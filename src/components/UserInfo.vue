@@ -6,8 +6,8 @@ const checked = ref(false);
 </script>
 
 <template>
-  <el-card style="width: 100%" :body-style="{ width: '350px' }">
-    <el-row justify="center" align="middle">
+  <el-card style="width: 350px">
+    <el-row :gutter="20" justify="center" align="middle">
       <el-col :span="8" style="text-align: center">
         <el-avatar
           :size="60"
