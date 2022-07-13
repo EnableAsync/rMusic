@@ -1,5 +1,5 @@
 <script setup>
-import { ElTable, ElTableColumn, ElCard } from "element-plus";
+import { ElTable, ElTableColumn } from "element-plus";
 
 import { computed, ref } from "vue";
 
