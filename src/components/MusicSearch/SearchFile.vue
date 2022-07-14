@@ -43,9 +43,7 @@ const formatter = (row) => {
         <ElButton size="small" @click="handleEdit(scope.$index, scope.row)"
           >播放</ElButton
         >
-        <ElButton
-          size="small"
-          @click="handleDelete(scope.$index, scope.row)"
+        <ElButton size="small" @click="handleDelete(scope.$index, scope.row)"
           >上传到云盘</ElButton
         >
       </template>
