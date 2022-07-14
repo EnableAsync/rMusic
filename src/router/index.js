@@ -6,15 +6,7 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      redirect: "/drive",
-    },
-    {
-      path: "/about",
-      name: "about",
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import("../views/AboutView.vue"),
+      redirect: "/search",
     },
     {
       path: "/user",
@@ -25,6 +17,11 @@ const router = createRouter({
       path: "/drive",
       name: "drive",
       component: () => import("../views/DriveView.vue"),
+    },
+    {
+      path: "/search",
+      name: "search",
+      component: () => import("../views/MusicSearch.vue"),
     },
   ],
 });

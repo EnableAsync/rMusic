@@ -3,8 +3,15 @@
   windows_subsystem = "windows"
 )]
 
+mod music;
+
 fn main() {
   tauri::Builder::default()
+  .invoke_handler(tauri::generate_handler![
+    music::search_music
+  ])
     .run(tauri::generate_context!())
     .expect("error while running tauri application");
 }
+
+
