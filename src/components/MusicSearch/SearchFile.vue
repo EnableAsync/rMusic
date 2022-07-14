@@ -4,28 +4,31 @@ import { ref, reactive } from "vue";
 import { invoke } from "@tauri-apps/api";
 
 const search = ref("不为谁而作的歌");
+const url = ref("");
 let tableData = reactive([]);
 
 const handleSearch = (name) => {
   invoke("search_music", { name: name }).then((response) => {
     console.log(response);
+    tableData.splice(0, tableData.length);
     tableData.push(response);
   });
 };
 
-const handleEdit = (index, row) => {
-  console.log(index, row);
+const handlePlay = (index, row) => {
+  url.value = row.song.context.HQ;
+  console.log(url);
+  console.log(row);
 };
 const handleDelete = (index, row) => {
   console.log(index, row);
 };
-
-const formatter = (row) => {
-  console.log(row);
-};
 </script>
 
 <template>
+  <div>
+    <audio :src="url" autoplay controls></audio>
+  </div>
   <ElTable :data="tableData" style="width: 100%">
     <ElTableColumn label="音乐标题" prop="song.name" />
     <ElTableColumn label="歌手" prop="song.artists[0].name" />
@@ -40,7 +43,7 @@ const formatter = (row) => {
         />
       </template>
       <template #default="scope">
-        <ElButton size="small" @click="handleEdit(scope.$index, scope.row)"
+        <ElButton size="small" @click="handlePlay(scope.$index, scope.row)"
           >播放</ElButton
         >
         <ElButton size="small" @click="handleDelete(scope.$index, scope.row)"

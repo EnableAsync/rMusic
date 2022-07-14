@@ -7,7 +7,7 @@ import { ElCard } from "element-plus";
 
 <template>
   <main>
-    <ElCard style="width: 800px">
+    <ElCard style="width: 100%">
       <DriveInfo />
       <DriveFile />
     </ElCard>

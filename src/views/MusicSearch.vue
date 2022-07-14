@@ -6,10 +6,8 @@ import { ElCard } from "element-plus";
 </script>
 
 <template>
-  <main>
-    <ElCard style="width: 800px">
+    <ElCard style="width: 1200px">
       <MusicInfo />
       <SearchFile />
     </ElCard>
-  </main>
 </template>
