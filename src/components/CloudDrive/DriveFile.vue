@@ -1,6 +1,5 @@
 <script setup>
 import { ElTable, ElTableColumn } from "element-plus";
-
 import { computed, ref } from "vue";
 
 const search = ref("");
