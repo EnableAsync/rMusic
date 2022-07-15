@@ -15,6 +15,9 @@
     },
     "bundle": {
       "active": true,
+      "appimage": {
+        "bundleMediaFramework": true
+      },
       "category": "DeveloperTool",
       "copyright": "",
       "deb": {
@@ -28,7 +31,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.tauri.dev",
+      "identifier": "com.rai.rMusic",
       "longDescription": "",
       "macOS": {
         "entitlements": null,
@@ -55,7 +58,7 @@
     "windows": [
       {
         "fullscreen": false,
-        "height": 600,
+        "height": 800,
         "resizable": true,
         "title": "rMusic",
         "width": 1600
