@@ -7,6 +7,43 @@
   resolved "https://registry.npmmirror.com/@antfu/utils/-/utils-0.5.2.tgz#8c2d931ff927be0ebe740169874a3d4004ab414b"
   integrity sha512-CQkeV+oJxUazwjlHD0/3ZD08QWKuGQkhnrKo3e6ly5pd48VUpXbb77q0xMU4+vc2CkJnDS02Eq/M9ugyX20XZA==
 
+"@any-touch/compute@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.npmmirror.com/@any-touch/compute/-/compute-2.2.0.tgz#3ecc58092393d6e2bd01e3314b1758b27f145d56"
+  integrity sha512-hrw74b/cVT8SmiKFLValmllajw+bBvTa5iUwIXFVVIJM9T3tO15zZC2QbjVz8Uwi6XjH932RDUILGMs2TNvyQg==
+  dependencies:
+    "@any-touch/shared" "^2.2.0"
+    "@any-touch/vector" "^2.2.0"
+    tslib "^2.3.1"
+
+"@any-touch/core@^2.0.2":
+  version "2.2.0"
+  resolved "https://registry.npmmirror.com/@any-touch/core/-/core-2.2.0.tgz#61751e7a016b642dc136ee430fb32dc1c4a9c8da"
+  integrity sha512-xMHAA5aLCatFto+4fQWyE4YAsyN/LsXS4mnYuVpqFYoNz8dl5FsB/TIyb9JrqMKLYMxxcZ9joqR8gDprH1lwBw==
+  dependencies:
+    "@any-touch/shared" "^2.2.0"
+    any-event "^2.2.0"
+
+"@any-touch/pan@^2.0.2":
+  version "2.2.0"
+  resolved "https://registry.npmmirror.com/@any-touch/pan/-/pan-2.2.0.tgz#50e4e1bc10c5ab6c0bad6c66c3f38006ddf63932"
+  integrity sha512-uMkCHbTm5qWji/FvhumP9n1ZCkPU7hy864g+ZhoWZ0OWAmn7s/TKRo4UqPBfqEPUMV6obGZvatrrgBLWT6J57w==
+  dependencies:
+    "@any-touch/compute" "^2.2.0"
+    "@any-touch/shared" "^2.2.0"
+
+"@any-touch/shared@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.npmmirror.com/@any-touch/shared/-/shared-2.2.0.tgz#1cddaf3caec5a60ad49708d3327917f14474d6be"
+  integrity sha512-2n1zWaATi/3osr/dkIUq5O7aSffKUsTM4DsIbPMW1VEO77v/rX2HkLoxt2Djzj5eCGh7An55Vw8NeA33kTTSRA==
+
+"@any-touch/vector@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.npmmirror.com/@any-touch/vector/-/vector-2.2.0.tgz#322ad29b304b795589c3bdd03b96818fb80cc0ae"
+  integrity sha512-t7pGYegIDCJl+swwsohZHZKmF71ZMt+hjwVEyhaEP6nQhcx6S7zulxnRxNp1t8s+c/JdK02Q89HnzQ4Ukg4+IA==
+  dependencies:
+    "@any-touch/shared" "^2.2.0"
+
 "@babel/parser@^7.16.4":
   version "7.18.8"
   resolved "https://registry.npmmirror.com/@babel/parser/-/parser-7.18.8.tgz#822146080ac9c62dac0823bb3489622e0bc1cbdf"
@@ -345,6 +382,13 @@ ansi-styles@^4.1.0:
   integrity sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg==
   dependencies:
     color-convert "^2.0.1"
+
+any-event@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.npmmirror.com/any-event/-/any-event-2.2.0.tgz#7173a77d437cef1bc210822deda0b77594b07011"
+  integrity sha512-PB4sEiVUjL+5mLmwlAGYdI5/1ouckapxS6+RPIvrGXv9XTMav7M3k3rR/f9fwAR+e2608CTR3FOR5HrOEYTtKA==
+  dependencies:
+    tslib "^2.3.1"
 
 anymatch@~3.1.2:
   version "3.1.2"
@@ -1376,6 +1420,11 @@ to-regex-range@^5.0.1:
   dependencies:
     is-number "^7.0.0"
 
+tslib@^2.3.1:
+  version "2.4.0"
+  resolved "https://registry.npmmirror.com/tslib/-/tslib-2.4.0.tgz#7cecaa7f073ce680a05847aa77be941098f36dc3"
+  integrity sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==
+
 type-check@^0.4.0, type-check@~0.4.0:
   version "0.4.0"
   resolved "https://registry.npmmirror.com/type-check/-/type-check-0.4.0.tgz#07b8203bfa7056c0657050e3ccd2c37730bab8f1"
@@ -1496,7 +1545,16 @@ vue-router@^4.1.2:
   dependencies:
     "@vue/devtools-api" "^6.1.4"
 
-vue@^3.2.37:
+vue3-audio-player@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.npmmirror.com/vue3-audio-player/-/vue3-audio-player-1.0.5.tgz#f3a06d32b4a6093f195647bb5ef9d77ebf01749e"
+  integrity sha512-NmY3Fsf49ESloKytpCK6OCzxaAEEXJwiO5p44LVSuWQfNx6po/vzL5O3YTDQb+pueem7wdCJ0CgN9ece6foPgw==
+  dependencies:
+    "@any-touch/core" "^2.0.2"
+    "@any-touch/pan" "^2.0.2"
+    vue "^3.2.25"
+
+vue@^3.2.25, vue@^3.2.37:
   version "3.2.37"
   resolved "https://registry.npmmirror.com/vue/-/vue-3.2.37.tgz#da220ccb618d78579d25b06c7c21498ca4e5452e"
   integrity sha512-bOKEZxrm8Eh+fveCqS1/NkG/n6aMidsI6hahas7pa0w/l7jkbssJVsRhVDs07IdDq7h9KHswZOgItnwJAgtVtQ==

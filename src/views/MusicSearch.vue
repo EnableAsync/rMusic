@@ -1,13 +1,27 @@
 <script setup>
-import MusicInfo from "../components/MusicSearch/MusicInfo.vue";
 import SearchFile from "../components/MusicSearch/SearchFile.vue";
+import AudioPlayer from "vue3-audio-player";
+import { ElCard, ElRow, ElCol } from "element-plus";
+import { usePlayerStore } from "../stores/player";
 
-import { ElCard } from "element-plus";
+const player = usePlayerStore();
 </script>
 
 <template>
-    <ElCard style="width: 1200px">
-      <MusicInfo />
-      <SearchFile />
-    </ElCard>
+  <ElRow>
+    <ElCol :span="24">
+      <ElCard>
+        <SearchFile />
+      </ElCard>
+    </ElCol>
+  </ElRow>
+
+  <ElRow>
+    <ElCol :span="24">
+      <AudioPlayer
+        :option="player.song"
+        style="position: fixed; bottom: 0; width: 100%"
+      />
+    </ElCol>
+  </ElRow>
 </template>

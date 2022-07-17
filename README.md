@@ -1,35 +1,22 @@
-# rMusic
+<h1 align="center">rMusic</h1>
 
-This template should help get you started developing with Vue 3 in Vite.
+<div align="center">
+基于 Tauri 实现的音乐搜索播放软件，支持 Linux、Windows、MacOS。
+<img src="./images/1.png" />
+</div>
 
-## Recommended IDE Setup
+## 🚀 下载渠道
+- [GitHub Releases](https://github.com/EnableAsync/rMusic/releases)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## ✨ 功能
+- [x] 搜索音乐在线播放
+- [ ] 上传音乐至云盘
 
-## Customize configuration
+## 📄 感谢以下开源项目
+- [UnblockNeteaseMusic](https://github.com/UnblockNeteaseMusic/server-rust)
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+## ⚠️ 免责声明
 
-## Project Setup
+本程序仅供个人学习及研究 Rust Tauri 使用，并未用于盈利用途。
 
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+若您认为本程序侵犯了您的知识产权，请提出 PR、Issue 或 DMCA 请求，表达您想移除相关代码意愿。

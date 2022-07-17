@@ -1,6 +1,6 @@
 {
   "name": "rmusic",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -12,7 +12,8 @@
     "element-plus": "^2.2.9",
     "pinia": "^2.0.14",
     "vue": "^3.2.37",
-    "vue-router": "^4.1.2"
+    "vue-router": "^4.1.2",
+    "vue3-audio-player": "^1.0.5"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.0",
