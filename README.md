@@ -2,7 +2,7 @@
 
 <div align="center">
 基于 Tauri 实现的音乐搜索播放软件，支持 Linux、Windows、MacOS。
-<img src="./images/1.png" />
+<img src="./images/1.png" width="800" />
 </div>
 
 ## 🚀 下载渠道
