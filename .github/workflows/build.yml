@@ -58,8 +58,8 @@ jobs:
         path: |
           ~/.cargo/registry
           ~/.cargo/git
-          src-tauri/target
-          node_modules
+          **/src-tauri/target
+          **/node_modules
         key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
         
     - name: Install dependencies (ubuntu only)
