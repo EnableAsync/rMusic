@@ -11,13 +11,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: setup node
+      - name: Setup node
         uses: actions/setup-node@v1
         with:
           node-version: 16
-      - name: get version
+      - name: Get version
         run: echo "PACKAGE_VERSION=$(node -p "require('./package.json').version")" >> $GITHUB_ENV
-      - name: create release
+      - name: Create release
         id: create-release
         uses: actions/github-script@v6
         with:
@@ -44,11 +44,11 @@ jobs:
     runs-on: ${{ matrix.platform }}
     steps:
     - uses: actions/checkout@v2
-    - name: setup node
+    - name: Setup node
       uses: actions/setup-node@v1
       with:
         node-version: 16
-    - name: install Rust stable
+    - name: Install Rust stable
       uses: actions-rs/toolchain@v1
       with:
         toolchain: stable
@@ -58,15 +58,16 @@ jobs:
         path: |
           ~/.cargo/registry
           ~/.cargo/git
-          target
+          src-tauri/target
+          node_modules
         key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
         
-    - name: install dependencies (ubuntu only)
+    - name: Install dependencies (ubuntu only)
       if: matrix.platform == 'ubuntu-latest'
       run: |
         sudo apt-get update
         sudo apt-get install -y libgtk-3-dev webkit2gtk-4.0 libappindicator3-dev librsvg2-dev patchelf
-    - name: install app dependencies and build it
+    - name: Install app dependencies and build it
       run: yarn && yarn build
     - uses: tauri-apps/tauri-action@v0
       env:
@@ -79,7 +80,7 @@ jobs:
     needs: [ create-release, build-tauri ]
     
     steps:
-      - name: publish release
+      - name: Publish release
         id: publish-release
         uses: actions/github-script@v6
         env:
