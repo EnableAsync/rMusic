@@ -58,7 +58,7 @@ jobs:
         path: |
           ~/.cargo/registry
           ~/.cargo/git
-          **/src-tauri/target
+          **/**/target
           **/node_modules
         key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
         
