@@ -58,10 +58,10 @@
     "windows": [
       {
         "fullscreen": false,
-        "height": 800,
+        "height": 600,
         "resizable": true,
         "title": "rMusic",
-        "width": 1000
+        "width": 1800
       }
     ]
   }
