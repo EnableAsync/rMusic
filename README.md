@@ -1,7 +1,7 @@
 <h1 align="center">rMusic</h1>
 
 <div align="center">
-基于 [Tauri](https://tauri.app) 实现的音乐搜索播放软件，支持 Linux、Windows、MacOS。
+基于 ![Tauri](https://tauri.app) 实现的音乐搜索播放软件，支持 Linux、Windows、MacOS。
 <img src="./images/1.png" width="800" />
 </div>
 
