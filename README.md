@@ -1,7 +1,7 @@
 <h1 align="center">rMusic</h1>
 
 <div align="center">
-基于 ![Tauri](https://tauri.app) 实现的音乐搜索播放软件，支持 Linux、Windows、MacOS。
+基于 <a href="https://tauri.app">Tauri</a> 实现的音乐搜索播放软件，支持 Linux、Windows、MacOS。
 <img src="./images/1.png" width="800" />
 </div>
 
@@ -15,6 +15,7 @@
 
 ## 📄 感谢以下开源项目
 - [UnblockNeteaseMusic](https://github.com/UnblockNeteaseMusic/server-rust)
+- [vue3-audio-player](https://github.com/RealCoolSnow/vue3-audio-player)
 
 ## ⚠️ 免责声明
 
