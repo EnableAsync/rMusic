@@ -53,7 +53,7 @@ jobs:
       with:
         toolchain: stable
 
-    - name: ⚡ Cache node
+    - name: ⚡ Cache Node
       uses: actions/cache@v2
       with:
         path: |
