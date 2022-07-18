@@ -2,7 +2,7 @@
 
 <div align="center">
 
-基于 <a href="https://tauri.app">Tauri</a> 实现的音乐搜索播放软件，支持 Linux、Windows、MacOS。
+使用 <a href="https://tauri.app">Tauri</a> 实现的音乐搜索播放软件，支持 Linux、Windows、MacOS。
 
 [![Release Version](https://img.shields.io/github/v/release/EnableAsync/rMusic?style=flat-square)](https://github.com/EnableAsync/rMusic/releases/latest)
 ![GitHub Repo size](https://img.shields.io/github/repo-size/EnableAsync/rMusic?style=flat-square&color=3cb371)
