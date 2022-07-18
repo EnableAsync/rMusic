@@ -62,6 +62,7 @@ jobs:
           ~/.cargo/bin/
           node_modules/
           src-tauri/target/
+          **/target/**
         key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
         
     - name: Install dependencies (ubuntu only)
