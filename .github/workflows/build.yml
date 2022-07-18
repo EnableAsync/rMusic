@@ -76,8 +76,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         releaseId: ${{ needs.create-release.outputs.release_id }}
-    - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v3
 
   publish-release:
     runs-on: ubuntu-latest
