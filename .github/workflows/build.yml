@@ -53,18 +53,15 @@ jobs:
       with:
         toolchain: stable
 
-    - name: Rust Cache
-      uses: Swatinem/rust-cache@v2
-      with:
-        working-directory: src-tauri
-
     - name: ⚡ Cache
       uses: actions/cache@v2
       with:
         path: |
-          ~/.cargo/registry
-          ~/.cargo/git
-          **/node_modules
+          ~/.cargo/registry/
+          ~/.cargo/git/
+          ~/.cargo/bin/
+          node_modules/
+          src-tauri/target/
         key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
         
     - name: Install dependencies (ubuntu only)
