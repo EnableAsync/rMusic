@@ -53,14 +53,20 @@ jobs:
       with:
         toolchain: stable
 
-    - name: ⚡ Cache
+    - name: ⚡ Cache node
+      uses: actions/cache@v2
+      with:
+        path: |
+          node_modules/**
+        key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+
+    - name: ⚡ Cache Rust
       uses: actions/cache@v2
       with:
         path: |
           ~/.cargo/registry/
           ~/.cargo/git/
           ~/.cargo/bin/
-          node_modules/**
           **/target/**
         key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
         
