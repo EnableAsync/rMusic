@@ -24,24 +24,6 @@ const tableData = [
     type: "mp3",
     date: "2022-06-06",
   },
-  {
-    name: "烟雨行舟",
-    author: "司南",
-    type: "mp3",
-    date: "2022-06-06",
-  },
-  {
-    name: "烟雨行舟",
-    author: "司南",
-    type: "mp3",
-    date: "2022-06-06",
-  },
-  {
-    name: "烟雨行舟",
-    author: "司南",
-    type: "mp3",
-    date: "2022-06-06",
-  },
 ];
 </script>
 
@@ -53,16 +35,11 @@ const tableData = [
     <ElTableColumn label="上传时间" prop="date" />
     <ElTableColumn align="right">
       <template #header>
-        <el-input v-model="search" size="small" placeholder="搜索云盘" />
+        <el-input v-model="search" placeholder="搜索云盘" />
       </template>
       <template #default="scope">
-        <el-button size="small" @click="handleEdit(scope.$index, scope.row)"
-          >下载</el-button
-        >
-        <el-button
-          size="small"
-          type="danger"
-          @click="handleDelete(scope.$index, scope.row)"
+        <el-button @click="handleEdit(scope.$index, scope.row)">下载</el-button>
+        <el-button type="danger" @click="handleDelete(scope.$index, scope.row)"
           >删除</el-button
         >
       </template>

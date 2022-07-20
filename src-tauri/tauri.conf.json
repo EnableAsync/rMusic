@@ -42,7 +42,13 @@
       },
       "resources": [],
       "shortDescription": "",
-      "targets": ["deb", "msi", "app", "dmg", "updater"],
+      "targets": [
+        "deb",
+        "msi",
+        "app",
+        "dmg",
+        "updater"
+      ],
       "windows": {
         "certificateThumbprint": null,
         "digestAlgorithm": "sha256",

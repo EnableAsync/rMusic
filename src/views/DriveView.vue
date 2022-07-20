@@ -6,10 +6,12 @@ import { ElCard } from "element-plus";
 </script>
 
 <template>
-  <main>
-    <ElCard style="width: 100%">
-      <DriveInfo />
-      <DriveFile />
-    </ElCard>
-  </main>
+  <ElRow>
+    <ElCol :span="24">
+      <ElCard>
+        <DriveInfo />
+        <DriveFile />
+      </ElCard>
+    </ElCol>
+  </ElRow>
 </template>
