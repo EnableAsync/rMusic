@@ -57,12 +57,15 @@ checksum = "bb07d2053ccdbe10e2af2995a2f116c1330396493dc1269f6a91d0ae82e19704"
 name = "app"
 version = "0.1.0"
 dependencies = [
- "anyhow",
  "serde",
  "serde_json",
  "tauri",
  "tauri-build",
  "unm_engine",
+ "unm_engine_bilibili",
+ "unm_engine_joox",
+ "unm_engine_kugou",
+ "unm_engine_kuwo",
  "unm_engine_migu",
  "unm_types",
 ]
@@ -390,6 +393,12 @@ dependencies = [
  "bytes",
  "memchr",
 ]
+
+[[package]]
+name = "concat-string"
+version = "1.0.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "7439becb5fafc780b6f4de382b1a7a3e70234afe783854a4702ee8adbb838609"
 
 [[package]]
 name = "convert_case"
@@ -2430,6 +2439,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "random-string"
+version = "1.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "cf4e63111ec5292d8af9c220f06fe3bb87991cc78b6f1f7e291d1ae6b8a60817"
+dependencies = [
+ "fastrand",
+]
+
+[[package]]
 name = "raw-window-handle"
 version = "0.4.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3531,6 +3549,87 @@ dependencies = [
  "futures",
  "log",
  "thiserror",
+ "unm_types",
+]
+
+[[package]]
+name = "unm_engine_bilibili"
+version = "0.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "c9339c3b6d19adde8ddfafe38e48148b4a5af94456fddbca7f967dbfd87751f5"
+dependencies = [
+ "anyhow",
+ "async-trait",
+ "http",
+ "log",
+ "serde",
+ "unm_engine",
+ "unm_request",
+ "unm_selector",
+ "unm_types",
+ "url",
+]
+
+[[package]]
+name = "unm_engine_joox"
+version = "0.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d5bf8e0bb182f859146273e04e5ddd16e1647f69c428b42579f29e50caa3c3d4"
+dependencies = [
+ "anyhow",
+ "async-trait",
+ "base64",
+ "http",
+ "log",
+ "once_cell",
+ "regex",
+ "reqwest",
+ "serde_json",
+ "unm_engine",
+ "unm_request",
+ "unm_selector",
+ "unm_types",
+]
+
+[[package]]
+name = "unm_engine_kugou"
+version = "0.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d39518ce95de4a80154041666a4a0cd39696646b8d466c06df4bbd6cdb2e9b41"
+dependencies = [
+ "anyhow",
+ "async-trait",
+ "concat-string",
+ "futures",
+ "http",
+ "log",
+ "reqwest",
+ "serde",
+ "serde_json",
+ "unm_engine",
+ "unm_request",
+ "unm_selector",
+ "unm_types",
+]
+
+[[package]]
+name = "unm_engine_kuwo"
+version = "0.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9e7332329ec68677a8dd4a8a084505bb48484bf97a649a790741367f70893d7f"
+dependencies = [
+ "anyhow",
+ "async-trait",
+ "cached",
+ "concat-string",
+ "http",
+ "log",
+ "random-string",
+ "reqwest",
+ "serde",
+ "unm_engine",
+ "unm_request",
+ "unm_selector",
  "unm_types",
 ]
 

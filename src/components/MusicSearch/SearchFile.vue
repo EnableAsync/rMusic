@@ -6,6 +6,7 @@ import {
   ElButton,
   ElRow,
   ElCol,
+  ElMessage,
 } from "element-plus";
 import { ref, reactive } from "vue";
 import { invoke } from "@tauri-apps/api";
@@ -16,20 +17,29 @@ import { usePlayerStore } from "../../stores/player";
 const search = ref("不为谁而作的歌");
 let tableData = reactive([]);
 const player = usePlayerStore();
+const searching = ref(false);
 
 const handleSearch = (name) => {
-  invoke("search_music", { name: name }).then((response) => {
-    console.log(response);
-    tableData.splice(0, tableData.length);
-    tableData.push(response);
-  });
+  searching.value = true;
+  invoke("search_music", { name: name }).then(
+    (response) => {
+      tableData.splice(0, tableData.length);
+      tableData.push(...response);
+      console.log(tableData);
+    },
+    (err) => {
+      console.log(err);
+      ElMessage(err);
+    }
+  );
+  searching.value = false;
 };
 
 const handlePlay = (index, row) => {
   console.log(row);
   player.play({
-    src: row.song.context.HQ,
-    title: row.song.name,
+    src: row.retrieved.url,
+    title: row.song.song.name,
     coverImage: "",
   });
 };
@@ -39,7 +49,7 @@ const handleDelete = (index, row) => {
 </script>
 
 <template>
-  <ElRow style="align-items: center">
+  <ElRow style="align-items: center" justify="space-evenly">
     <ElCol :span="4">
       <span style="font-size: 1.5em; font-weight: bold">音乐搜索</span>
     </ElCol>
@@ -52,11 +62,17 @@ const handleDelete = (index, row) => {
         :prefix-icon="Search"
       />
     </ElCol>
+    <ElCol :span="2">
+      <ElButton :loading="searching" @click="handleSearch(search)">
+        搜索
+      </ElButton>
+    </ElCol>
   </ElRow>
   <ElTable :data="tableData" style="width: 100%">
-    <ElTableColumn label="音乐标题" prop="song.name" />
-    <ElTableColumn label="歌手" prop="song.artists[0].name" />
-    <ElTableColumn label="URL" prop="song.context.HQ" />
+    <ElTableColumn label="音乐标题" prop="song.song.name" />
+    <ElTableColumn label="歌手" prop="song.song.artists[0].name" />
+    <ElTableColumn label="URL" prop="retrieved.url" />
+    <ElTableColumn label="来源" prop="retrieved.source" />
     <ElTableColumn align="right">
       <template #header>
         <ElInput

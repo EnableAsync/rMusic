@@ -21,7 +21,10 @@ tauri = { version = "1.0.0-rc.12", features = ["api-all"] }
 unm_engine = "0.3.0"
 unm_types = "0.3.0"
 unm_engine_migu = "0.3.0"
-anyhow = "1.0"
+unm_engine_kugou = "0.3.0"
+unm_engine_kuwo = "0.3.0"
+unm_engine_bilibili = "0.3.0"
+unm_engine_joox = "0.3.0"
 
 [features]
 # by default Tauri runs in production mode
