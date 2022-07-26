@@ -1,10 +1,10 @@
 [package]
 name = "app"
-version = "0.1.0"
+version = "0.2.1"
 description = "A Tauri App"
-authors = ["you"]
+authors = ["EnableAsync"]
 license = ""
-repository = ""
+repository = "https://github.com/EnableAsync/rMusic"
 default-run = "app"
 edition = "2021"
 rust-version = "1.57"
@@ -16,15 +16,13 @@ tauri-build = { version = "1.0.0-rc.10", features = [] }
 
 [dependencies]
 serde_json = "1.0"
-serde = { version = "1.0", features = ["derive"] }
+serde = { version = "1.0.140", features = ["derive"] }
 tauri = { version = "1.0.0-rc.12", features = ["api-all"] }
 unm_engine = "0.3.0"
 unm_types = "0.3.0"
-unm_engine_migu = "0.3.0"
-unm_engine_kugou = "0.3.0"
 unm_engine_kuwo = "0.3.0"
-unm_engine_bilibili = "0.3.0"
-unm_engine_joox = "0.3.0"
+env_logger = "0.9.0"
+log = "0.4.17"
 
 [features]
 # by default Tauri runs in production mode
@@ -34,6 +32,6 @@ default = [ "custom-protocol" ]
 # DO NOT remove this
 custom-protocol = [ "tauri/custom-protocol" ]
 
-# [profile.release]
-# opt-level = "z"  # Optimize for size.
-# strip = true  # Automatically strip symbols from the binary.
+[profile.release]
+opt-level = "z"  # Optimize for size.
+strip = true  # Automatically strip symbols from the binary.
